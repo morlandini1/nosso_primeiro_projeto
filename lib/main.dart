@@ -85,7 +85,7 @@ class MyApp extends StatelessWidget {
                   onPressed: () {
                     print('Você apertou o Botão');
                   },
-                  child: Text('Aperte o botão!'),
+                  child: Text('Aperte o botão.'),
               ),
             ],
           ),
