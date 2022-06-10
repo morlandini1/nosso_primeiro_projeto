@@ -88,7 +88,7 @@ class MyApp extends StatelessWidget {
                   child: Text('Aperte o botão.'),
               ),
             ],
-          ),
+          ) ,
         ));
   }
 }
