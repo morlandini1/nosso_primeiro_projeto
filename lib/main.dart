@@ -80,7 +80,7 @@ class _TaskState extends State<Task> {
                           )),
                       ElevatedButton(
                           onPressed: () {
-                            setState((){
+                            setState(() {
                               nivel++;
                             });
                             print(nivel);
@@ -89,9 +89,20 @@ class _TaskState extends State<Task> {
                     ],
                   ),
                 ),
-                Text(
-                  'Nivel: $nivel',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                Row(
+                  children: [
+                    Container(
+                      child: LinearProgressIndicator(
+                        color: Colors.white,
+                        value: nivel/10,
+                      ),
+                      width: 200,
+                    ),
+                    Text(
+                      'Nivel: $nivel',
+                      style: TextStyle(color: Colors.white, fontSize: 16),
+                    ),
+                  ],
                 ),
               ],
             ),
