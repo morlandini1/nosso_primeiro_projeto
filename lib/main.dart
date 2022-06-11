@@ -19,15 +19,14 @@ class MyApp extends StatelessWidget {
           title: Text('Tarefas'),
         ),
         body: ListView(
-
           children: [
-            Task('Aprender Flutter'),
+            Task('Aprender Flutter no cafe da manha comendo sucrilhos'),
             Task('Andar de Bike'),
             Task('Meditar'),
-             Task('Meditar'),
-             Task('Meditar'),
-             Task('Meditar'),
-             Task('Meditar'),
+            Task('Meditar'),
+            Task('Meditar'),
+            Task('Meditar'),
+            Task('Meditar'),
           ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
@@ -36,10 +35,10 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class Task extends StatelessWidget {
   final String nome;
-  const Task(this.nome,{Key? key}) : super(key: key);
+
+  const Task(this.nome, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -52,26 +51,39 @@ class Task extends StatelessWidget {
               color: Colors.blue,
               height: 140,
             ),
-            Container(
-              color: Colors.white,
-              height: 100,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    color: Colors.black26,
-                    width: 72,
-                    height: 100,
+            Column(
+              children: [
+                Container(
+                  color: Colors.white,
+                  height: 100,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        color: Colors.black26,
+                        width: 72,
+                        height: 100,
+                      ),
+                      Container(
+                        width: 200,
+                          child: Text(
+                        nome,
+                        style: TextStyle(
+                          fontSize: 24,
+                          overflow: TextOverflow.ellipsis
+                        ),
+                      )),
+                      ElevatedButton(
+                          onPressed: () {}, child: Icon(Icons.arrow_drop_up))
+                    ],
                   ),
-                  Text(nome),
-                  ElevatedButton(onPressed: (){}, child: Icon(Icons.arrow_drop_up))
-                ],
-              ),
-            )
+                ),
+                Text('Nivel: 0', style: TextStyle(color: Colors.white, fontSize: 16),)
+              ],
+            ),
           ],
         ),
       ),
     );
   }
 }
-
