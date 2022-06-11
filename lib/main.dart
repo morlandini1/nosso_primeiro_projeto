@@ -42,6 +42,7 @@ class Task extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int nivel = 0;
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
@@ -65,20 +66,25 @@ class Task extends StatelessWidget {
                         height: 100,
                       ),
                       Container(
-                        width: 200,
+                          width: 200,
                           child: Text(
-                        nome,
-                        style: TextStyle(
-                          fontSize: 24,
-                          overflow: TextOverflow.ellipsis
-                        ),
-                      )),
+                            nome,
+                            style: TextStyle(
+                                fontSize: 24, overflow: TextOverflow.ellipsis),
+                          )),
                       ElevatedButton(
-                          onPressed: () {}, child: Icon(Icons.arrow_drop_up))
+                          onPressed: () {
+                            nivel++;
+                            print(nivel);
+                          },
+                          child: Icon(Icons.arrow_drop_up))
                     ],
                   ),
                 ),
-                Text('Nivel: 0', style: TextStyle(color: Colors.white, fontSize: 16),)
+                Text(
+                  'Nivel: $nivel',
+                  style: TextStyle(color: Colors.white, fontSize: 16),
+                ),
               ],
             ),
           ],
