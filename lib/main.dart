@@ -26,7 +26,6 @@ class MyApp extends StatelessWidget {
             Task('Meditar'),
             Task('Meditar'),
             Task('Meditar'),
-            Task('Meditar'),
           ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
