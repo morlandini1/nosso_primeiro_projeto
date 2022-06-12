@@ -96,7 +96,7 @@ class _TaskState extends State<Task> {
                         color: Colors.white,
                         value: nivel/10,
                       ),
-                      width: 199,
+                      width: 200,
                     ),
                     Text(
                       'Nivel: $nivel',
