@@ -79,14 +79,25 @@ class _TaskState extends State<Task> {
                             style: TextStyle(
                                 fontSize: 24, overflow: TextOverflow.ellipsis),
                           )),
-                      ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              nivel++;
-                            });
-                            print(nivel);
-                          },
-                          child: Icon(Icons.arrow_drop_up))
+                      Container(
+                        height: 52,
+                          width: 52,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                nivel++;
+                              });
+                              print(nivel);
+                            },
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Icon(Icons.arrow_drop_up),
+                                Text('Up', style: TextStyle(fontSize: 12),)
+                              ],
+                            )),
+                      )
                     ],
                   ),
                 ),
