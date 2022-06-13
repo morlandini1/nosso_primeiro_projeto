@@ -21,14 +21,12 @@ class MyApp extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            Task('Aprender Flutter no cafe da manha comendo sucrilhos'),
-            Task('Andar de Bike'),
-            Task('Meditar'),
-            Task('Meditar'),
-            Task('Meditar'),
-            Task('Meditar'),
-            Task('Meditar'),
-          ],
+            Task('Aprender Flutter', 'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
+            Task('Andar de Bike', ''),
+            Task('Meditar', ''),
+            Task('Ler', ''),
+            Task('Jogar', ''),
+           ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
       ),
@@ -38,8 +36,9 @@ class MyApp extends StatelessWidget {
 
 class Task extends StatefulWidget {
   final String nome;
+  final String foto;
 
-  const Task(this.nome, {Key? key}) : super(key: key);
+  const Task(this.nome, this.foto, {Key? key}) : super(key: key);
 
   @override
   State<Task> createState() => _TaskState();
@@ -71,7 +70,10 @@ class _TaskState extends State<Task> {
                         color: Colors.black26,
                         width: 72,
                         height: 100,
-                        child: Image.network(''),
+                        child: Image.network(
+                          widget.foto,
+                          fit: BoxFit.fitHeight,
+                        ),
                       ),
                       Container(
                           width: 200,
@@ -82,7 +84,7 @@ class _TaskState extends State<Task> {
                           )),
                       Container(
                         height: 52,
-                          width: 52,
+                        width: 52,
                         child: ElevatedButton(
                             onPressed: () {
                               setState(() {
@@ -95,7 +97,10 @@ class _TaskState extends State<Task> {
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 Icon(Icons.arrow_drop_up),
-                                Text('Up', style: TextStyle(fontSize: 12),)
+                                Text(
+                                  'Up',
+                                  style: TextStyle(fontSize: 12),
+                                )
                               ],
                             )),
                       )
