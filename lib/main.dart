@@ -71,6 +71,7 @@ class _TaskState extends State<Task> {
                         color: Colors.black26,
                         width: 72,
                         height: 100,
+                        child: Image.network(''),
                       ),
                       Container(
                           width: 200,
