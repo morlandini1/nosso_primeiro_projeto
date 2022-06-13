@@ -21,11 +21,11 @@ class MyApp extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            Task('Aprender Flutter', 'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
-            Task('Andar de Bike', ''),
-            Task('Meditar', ''),
-            Task('Ler', ''),
-            Task('Jogar', ''),
+            Task('Aprender Flutter', 'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',3),
+            Task('Andar de Bike', '',2),
+            Task('Meditar', '',5),
+            Task('Ler', '',4),
+            Task('Jogar', '',1),
            ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
@@ -37,8 +37,9 @@ class MyApp extends StatelessWidget {
 class Task extends StatefulWidget {
   final String nome;
   final String foto;
+  final int dificuldade;
 
-  const Task(this.nome, this.foto, {Key? key}) : super(key: key);
+  const Task(this.nome, this.foto, this.dificuldade, {Key? key}) : super(key: key);
 
   @override
   State<Task> createState() => _TaskState();
@@ -76,9 +77,10 @@ class _TaskState extends State<Task> {
                         ),
                       ),
                       Column(
-                        mainAxisAlignment: MainAxisAlignment.,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
+                          SizedBox(
                               width: 200,
                               child: Text(
                                 widget.nome,
@@ -87,11 +89,11 @@ class _TaskState extends State<Task> {
                               )),
                           Row(
                             children: [
-                              Icon(Icons.star, size: 15, color: Colors.blue,),
-                              Icon(Icons.star, size: 15, color: Colors.blue,),
-                              Icon(Icons.star, size: 15, color: Colors.blue,),
-                              Icon(Icons.star, size: 15, color: Colors.blue[100],),
-                              Icon(Icons.star, size: 15, color: Colors.blue[100],),
+                              Icon(Icons.star, size: 15, color: (widget.dificuldade >= 1) ? Colors.blue : Colors.blue[100],),
+                              Icon(Icons.star, size: 15, color: (widget.dificuldade >= 2) ? Colors.blue : Colors.blue[100],),
+                              Icon(Icons.star, size: 15, color: (widget.dificuldade >= 3) ? Colors.blue : Colors.blue[100],),
+                              Icon(Icons.star, size: 15, color: (widget.dificuldade >= 4) ? Colors.blue : Colors.blue[100],),
+                              Icon(Icons.star, size: 15, color: (widget.dificuldade >= 5) ? Colors.blue : Colors.blue[100],),
 
 
                             ],
