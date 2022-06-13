@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
+          leading: Container(color: Colors.black26),
           title: Text('Tarefas'),
         ),
         body: ListView(
