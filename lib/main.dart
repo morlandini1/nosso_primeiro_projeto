@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nosso_primeiro_projeto/minha_primeira_tela.dart';
 
 void main() {
   runApp( MyApp());
@@ -21,34 +22,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          leading: Container(),
-          title: Text('Tarefas'),
-        ),
-        body: AnimatedOpacity(
-          opacity: opacidade ? 1 : 0,
-          duration: Duration(milliseconds: 800),
-          child: ListView(
-            children: [
-              Task('Aprender Flutter', 'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',3),
-              Task('Andar de Bike', '',2),
-              Task('Meditar', '',5),
-              Task('Ler', '',4),
-              Task('Jogar', '',1),
-             ],
-          ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            setState((){
-              opacidade = !opacidade;
-
-            });
-        },
-        child: Icon(Icons.remove_red_eye),
-        ),
-      ),
+      home: MyFirstWidget(),
     );
 
   }
