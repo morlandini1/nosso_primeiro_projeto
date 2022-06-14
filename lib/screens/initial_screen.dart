@@ -31,6 +31,7 @@ class _InitialScreenState extends State<InitialScreen> {
             Task('Meditar', '', 5),
             Task('Ler', '', 4),
             Task('Jogar', '', 1),
+            SizedBox(height: 80,)
           ],
         ),
       ),
