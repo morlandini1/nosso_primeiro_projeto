@@ -25,12 +25,12 @@ class _InitialScreenState extends State<InitialScreen> {
           children: const [
             Task(
                 'Aprender Flutter',
-                'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
+                'assets/images/dash.png',
                 3),
-            Task('Andar de Bike', '', 2),
-            Task('Meditar', '', 5),
-            Task('Ler', '', 4),
-            Task('Jogar', '', 1),
+            Task('Andar de Bike', 'assets/images/bike.webp', 2),
+            Task('Meditar', 'assets/images/meditar.jpeg', 5),
+            Task('Ler', 'assets/images/livro.jpg', 4),
+            Task('Jogar', 'assets/images/jogar.jpg', 1),
             SizedBox(height: 80,)
           ],
         ),
