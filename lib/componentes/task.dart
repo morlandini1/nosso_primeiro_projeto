@@ -58,7 +58,7 @@ class _TaskState extends State<Task> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
-                            width: 189,
+                            width: 200,
                             child: Text(
                               widget.nome,
                               style: const TextStyle(
