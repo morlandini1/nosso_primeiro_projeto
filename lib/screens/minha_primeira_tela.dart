@@ -66,8 +66,8 @@ class MyFirstWidget extends StatelessWidget {
               ),
               Container(
                 color: Colors.amber,
-                height: 25,
-                width: 299,
+                height: 30,
+                width: 300,
                 child: const Text(
                   'Diamante Amarelo',
                   style: TextStyle(color: Colors.black, fontSize: 28),
